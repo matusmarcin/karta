@@ -138,6 +138,26 @@ function karta_widgets_init() {
 		'after_title'   => '</h3>',
 	) );
 
+	register_sidebar( array(
+		'name'          => esc_html__( 'Narrow (left) sidebar', 'karta' ),
+		'id'            => 'left-1',
+		'description'   => esc_html__( 'Add narrow widgets here.', 'karta' ),
+		'before_widget' => '<div class="col-xs-12"><section id="%1$s" class="site-narrow-widget %2$s">',
+		'after_widget'  => '</section></div>',
+		'before_title'  => '<h3 class="site-narrow-widget__title">',
+		'after_title'   => '</h3>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Wide (right) sidebar', 'karta' ),
+		'id'            => 'right-1',
+		'description'   => esc_html__( 'Add wide widgets here.', 'karta' ),
+		'before_widget' => '<div class="col-xs-12"><section id="%1$s" class="site-wide-widget %2$s">',
+		'after_widget'  => '</section></div>',
+		'before_title'  => '<h3 class="site-wide-widget__title">',
+		'after_title'   => '</h3>',
+	) );
+
 	/**
 	 * Modals sidebar.
 	 */
@@ -157,9 +177,9 @@ add_action( 'widgets_init', 'karta_widgets_init' );
  * Enqueue scripts and styles.
  */
 function karta_scripts() {
-	wp_enqueue_style( 'karta-fonts', '//fonts.googleapis.com/css?family=Work+Sans:400,500,600,700,800' );
+	// wp_enqueue_style( 'karta-fonts', '//fonts.googleapis.com/css?family=Work+Sans:400,500,600,700,800' );
 
-	wp_enqueue_style( 'karta-style', get_template_directory_uri() . '/css/style.css', array( 'karta-fonts' ) );
+	wp_enqueue_style( 'karta-style', get_template_directory_uri() . '/css/style.css' );
 
 	wp_enqueue_script( 'karta-vendors', get_template_directory_uri() . '/js/vendors.js', array( 'jquery', 'jquery-masonry' ), '20160411', true );
 	wp_enqueue_script( 'karta-scripts', get_template_directory_uri() . '/js/scripts.js', array( 'karta-vendors' ), '20160411', true );

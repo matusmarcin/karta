@@ -14,7 +14,7 @@ if ( 'chat' === get_post_format() ) {
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="post-cover" <?php karta_background_image_url() ?>>
-		<div class="post-intro">
+		<div class="post-intro container">
 			<div class="post-intro__categories">
 				<?php karta_categories(); ?>
 			</div>
@@ -25,9 +25,12 @@ if ( 'chat' === get_post_format() ) {
 			</div>
 		</div>
 	</div>
-	<div class="container container--custom">
+	<div class="container">
 		<div class="row">
-			<div class="col-xs-12">					
+		<?php 
+		if(is_singular()) {
+		?>
+			<div class="col-md-8 col-xs-12 col-sm-12">	
 				<?php
 				if ( get_the_content() !== '' ) : ?>
 				<div class="post-content">
@@ -38,6 +41,26 @@ if ( 'chat' === get_post_format() ) {
 				</div>
 				<?php endif; ?>
 			</div>
+			<div class="col-md-4 col-sm-12 col-xs-12">
+				<?php if ( is_active_sidebar( 'right-1' ) ) : ?>
+					<?php dynamic_sidebar( 'right-1' ); ?>
+				<?php endif; ?>
+			</div>
+		<?php  
+		} else {
+		?>
+			<div class="col-xs-12">
+				<?php
+				if ( get_the_content() !== '' ) : ?>
+				<div class="post-content">
+					<?php
+					the_content();
+					karta_pagination();
+					?>
+				</div>
+				<?php endif; ?>
+			</div>
+		<?php } ?>
 		</div>
 	</div>
 </article>
@@ -48,8 +71,13 @@ if ( 'chat' === get_post_format() ) {
 }
 ?>
 
-<!--======== SHARE ARTICLE ========-->
-<?php karta_the_share_links(); ?>
+<?php 
+if(is_singular()) {
 
-<!--======== RELATED POSTS ========-->
-<?php karta_the_related_posts();
+	// <!--======== SHARE ARTICLE ========-->
+	karta_the_share_links();
+
+	// <!--======== RELATED POSTS ========-->
+	karta_the_related_posts();
+
+}

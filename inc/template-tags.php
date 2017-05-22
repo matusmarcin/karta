@@ -174,7 +174,7 @@ function karta_logo() {
 	<?php endif;
 
 	if ( 1 === $header_text ) : ?>
-		<a class="site-title" href="<?php echo esc_url( home_url() ) ?>"><?php bloginfo( 'name' ); ?></a>
+		<a class="site-title" href="<?php echo esc_url( home_url() ) ?>"><span><?php bloginfo( 'name' ); ?></span></a>
 		<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 	<?php endif;
 }

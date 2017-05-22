@@ -26,6 +26,20 @@ get_header(); ?>
 
 		<div class="container">
 			<div class="row">
+				<div class="col-xs-8">
+				<?php
+					the_post();
+					get_template_part( 'template-parts/content-single', get_post_format() );
+				?>
+				</div>
+				<div class="col-xs-4">
+					<?php if ( is_active_sidebar( 'right-1' ) ) : ?>
+						<?php dynamic_sidebar( 'right-1' ); ?>
+					<?php endif; ?>
+				</div>
+			</div>
+
+			<div class="row">
 				<div class="col-xs-12">
 					<div class="masonry-grid">
 						<div class="masonry-grid__sizer"></div>
