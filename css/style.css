@@ -269,7 +269,7 @@ body {
   font-family: 'DokoSans', sans-serif;
   font-size: 18px;
   line-height: 1.66666667;
-  color: #000;
+  color: #222;
   background-color: #f8f8f8;
 }
 
@@ -283,13 +283,13 @@ textarea {
 }
 
 a {
-  color: #000;
+  color: #e84443;
   text-decoration: none;
 }
 
 a:hover,
 a:focus {
-  color: #000000;
+  color: #c61918;
   text-decoration: underline;
 }
 
@@ -551,12 +551,12 @@ mark,
 }
 
 .text-primary {
-  color: #000;
+  color: #1aa1a3;
 }
 
 a.text-primary:hover,
 a.text-primary:focus {
-  color: #000000;
+  color: #137677;
 }
 
 .text-success {
@@ -597,12 +597,12 @@ a.text-danger:focus {
 
 .bg-primary {
   color: #fff;
-  background-color: #000;
+  background-color: #1aa1a3;
 }
 
 a.bg-primary:hover,
 a.bg-primary:focus {
-  background-color: #000000;
+  background-color: #137677;
 }
 
 .bg-success {
@@ -771,7 +771,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: 'DokoSans', sans-serif;
 }
 
 code {
@@ -806,9 +806,9 @@ pre {
   line-height: 1.66666667;
   word-break: break-all;
   word-wrap: break-word;
-  color: #333333;
-  background-color: #f5f5f5;
-  border: 1px solid #ccc;
+  color: #222;
+  background-color: #f9e8b0;
+  border: 1px solid #f9e8b0;
   border-radius: 0;
 }
 
@@ -1405,7 +1405,7 @@ output {
   padding-top: 7px;
   font-size: 18px;
   line-height: 1.66666667;
-  color: #000;
+  color: #1aa1a3;
 }
 
 .form-control {
@@ -1415,7 +1415,7 @@ output {
   padding: 6px 12px;
   font-size: 18px;
   line-height: 1.66666667;
-  color: #000;
+  color: #1aa1a3;
   background-color: transparent;
   background-image: none;
   border: 1px solid #ccc;
@@ -1792,7 +1792,7 @@ select[multiple].input-lg {
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #404040;
+  color: #626262;
 }
 
 .form-horizontal .radio,
@@ -2206,29 +2206,29 @@ fieldset[disabled] .btn-warning.focus {
 
 .btn-danger {
   color: #fff;
-  background-color: #d9534f;
-  border-color: #d43f3a;
+  background-color: #e84443;
+  border-color: #e52d2c;
 }
 
 .btn-danger:focus,
 .btn-danger.focus {
   color: #fff;
-  background-color: #c9302c;
-  border-color: #761c19;
+  background-color: #dd1c1b;
+  border-color: #821110;
 }
 
 .btn-danger:hover {
   color: #fff;
-  background-color: #c9302c;
-  border-color: #ac2925;
+  background-color: #dd1c1b;
+  border-color: #bd1817;
 }
 
 .btn-danger:active,
 .btn-danger.active,
 .open > .dropdown-toggle.btn-danger {
   color: #fff;
-  background-color: #c9302c;
-  border-color: #ac2925;
+  background-color: #dd1c1b;
+  border-color: #bd1817;
 }
 
 .btn-danger:active:hover,
@@ -2241,8 +2241,8 @@ fieldset[disabled] .btn-warning.focus {
 .btn-danger.active.focus,
 .open > .dropdown-toggle.btn-danger.focus {
   color: #fff;
-  background-color: #ac2925;
-  border-color: #761c19;
+  background-color: #bd1817;
+  border-color: #821110;
 }
 
 .btn-danger:active,
@@ -2260,17 +2260,17 @@ fieldset[disabled] .btn-danger:focus,
 .btn-danger.disabled.focus,
 .btn-danger[disabled].focus,
 fieldset[disabled] .btn-danger.focus {
-  background-color: #d9534f;
-  border-color: #d43f3a;
+  background-color: #e84443;
+  border-color: #e52d2c;
 }
 
 .btn-danger .badge {
-  color: #d9534f;
+  color: #e84443;
   background-color: #fff;
 }
 
 .btn-link {
-  color: #000;
+  color: #e84443;
   font-weight: normal;
   border-radius: 0;
 }
@@ -2293,7 +2293,7 @@ fieldset[disabled] .btn-link {
 
 .btn-link:hover,
 .btn-link:focus {
-  color: #000000;
+  color: #c61918;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -2839,7 +2839,7 @@ blockquote:before {
   content: "";
   width: 30px;
   height: 1px;
-  background: #000;
+  background: #1aa1a3;
   position: absolute;
   top: 14px;
   left: -50px;
@@ -2901,7 +2901,7 @@ input,
 textarea {
   border: 0;
   width: 100%;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #1aa1a3;
   background: transparent;
   font-family: 'DokoSans', sans-serif;
   font-size: 18px;
@@ -2914,13 +2914,13 @@ textarea {
   text-transform: uppercase;
   font-size: 15px;
   font-weight: 600;
-  border: 2px solid #000;
+  border: 2px solid #1aa1a3;
   transition: color ease-in 0.3s, background ease-in 0.3s;
 }
 
 [type="submit"]:hover,
 [type="submit"]:focus {
-  background: #000;
+  background: #1aa1a3;
   color: #fff;
 }
 
@@ -2931,7 +2931,7 @@ textarea {
   text-align: center;
   text-transform: uppercase;
   font-weight: 600;
-  color: #000;
+  color: #1aa1a3;
 }
 
 .pagination .prev {
@@ -3055,7 +3055,7 @@ textarea {
 
 .main-submenu > .menu-item > a:hover {
   background: #fff;
-  color: #000;
+  color: #1aa1a3;
 }
 
 .main-submenu .menu-item-has-children {
@@ -3072,7 +3072,7 @@ textarea {
 }
 
 .main-submenu__submenu .menu-item a {
-  color: #000;
+  color: #1aa1a3;
   margin-bottom: 0;
 }
 
@@ -3135,7 +3135,7 @@ textarea {
 }
 
 .navbar-toggle.collapsed .icon-bar {
-  background: #000;
+  background: #1aa1a3;
 }
 
 .navbar-collapse {
@@ -3150,7 +3150,7 @@ textarea {
 /* ---- Footer ---- */
 
 .site-footer {
-  border-top: 1px solid #000;
+  border-top: 1px solid #1aa1a3;
   font-weight: 400;
   padding-top: 50px;
 }
@@ -3175,10 +3175,10 @@ textarea {
 }
 
 .site-info {
-  background-color: #000;
+  background-color: #e84443;
   padding: 30px 0;
   text-transform: uppercase;
-  color: #8e8e8e;
+  color: #fff;
   text-align: center;
 }
 
@@ -3218,7 +3218,7 @@ textarea {
 /* ---- Modal ---- */
 
 .modal {
-  background-color: #000;
+  background-color: #1aa1a3;
   position: static;
   color: #fff;
   display: none;
@@ -3243,7 +3243,7 @@ textarea {
 .modal [type="submit"]:hover,
 .modal button:hover {
   background: #fff;
-  color: #000;
+  color: #1aa1a3;
 }
 
 .modal--widget {
@@ -3252,7 +3252,7 @@ textarea {
 
 .modal__content {
   width: 100%;
-  max-width: 700px;
+  max-width: 1100px;
   margin: 0 auto;
   text-align: left;
 }
@@ -3308,7 +3308,7 @@ textarea {
 .post__primary-category {
   display: inline-block;
   background: #fff;
-  color: #000;
+  color: #1aa1a3;
   margin: 0;
   padding: 6px 14px;
   font-size: 12px;
@@ -3318,7 +3318,7 @@ textarea {
 }
 
 .post__primary-category:hover {
-  background: #000;
+  background: #1aa1a3;
   color: #fff;
 }
 
@@ -3336,7 +3336,7 @@ textarea {
 }
 
 .post__link:hover + .post__figcaption .post__intro {
-  background-color: #000;
+  background-color: #1aa1a3;
 }
 
 .post__primary-category {
@@ -3347,7 +3347,7 @@ textarea {
 .post__intro {
   display: block;
   position: relative;
-  background-color: #000;
+  background-color: #1aa1a3;
   padding: 10px;
   transition: background ease-in 0.3s;
 }
@@ -3357,7 +3357,7 @@ textarea {
 }
 
 .has-post-thumbnail .post__intro:hover {
-  background: #000;
+  background: #1aa1a3;
 }
 
 .post__intro .post__date {
@@ -3457,8 +3457,8 @@ textarea {
 /* ---- Archive ---- */
 
 .archive-intro {
-  color: #fff;
-  background: #000;
+  color: #222;
+  background: #f4d369;
   text-align: center;
   padding: 35px 0;
   margin-bottom: 50px;
@@ -3490,7 +3490,8 @@ textarea {
 }
 
 .post-intro__categories {
-  background: #fff;
+  background: #1aa1a3;
+  color: #fff;
   font-size: 12px;
   font-weight: 600;
   padding: 11px 15px;
@@ -3498,20 +3499,20 @@ textarea {
 }
 
 .post-intro__content {
-  background: #000;
+  background: #1aa1a3;
   padding: 35px 50px 20px;
   color: #fff;
   margin: 0;
 }
 
 .has-post-thumbnail .post-intro__content {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .post-intro__date {
   font-size: 15px;
   margin-bottom: 10px;
-  margin-left: -30px;
+  margin-left: 0;
 }
 
 .post-intro__title {
@@ -3664,7 +3665,7 @@ textarea {
 .post-content .wp-caption figcaption:hover,
 .post-content figure .wp-caption-text:hover,
 .post-content .wp-caption .wp-caption-text:hover {
-  background: #000;
+  background: #1aa1a3;
 }
 
 .post-content input {
@@ -3697,15 +3698,15 @@ textarea {
 .share-post__list-item a {
   display: block;
   text-align: center;
-  color: #000;
+  color: #1aa1a3;
   text-transform: uppercase;
   transition: background ease-in-out 0.3s, color ease-in-out 0.3s;
   padding: 20px 0;
-  border: 2px solid #000;
+  border: 2px solid #1aa1a3;
 }
 
 .share-post__list-item a:hover {
-  background: #000;
+  background: #1aa1a3;
   color: #fff;
 }
 
@@ -3721,7 +3722,7 @@ textarea {
 }
 
 .post-box__intro {
-  background: #000;
+  background: #1aa1a3;
   padding: 35px 50px 20px;
   color: #fff;
   margin: 0;
@@ -3797,7 +3798,7 @@ textarea {
 
 .error404 .not-found {
   padding-top: 20px;
-  background: #000;
+  background: #1aa1a3;
   color: #fff;
 }
 
@@ -3815,7 +3816,7 @@ textarea {
 
 .error404 .not-found__search-form input[type="submit"]:hover {
   background: #fff;
-  color: #000;
+  color: #1aa1a3;
 }
 
 /* ---- Comments ---- */
@@ -3949,7 +3950,7 @@ textarea {
 
 .comment-form input,
 .comment-form textarea {
-  border: 1px solid #000;
+  border: 1px solid #1aa1a3;
   padding: 10px 20px;
   margin-bottom: 30px;
 }
@@ -3970,7 +3971,7 @@ textarea {
 }
 
 .comment-form input[type="submit"] {
-  background: #000;
+  background: #1aa1a3;
   color: #fff;
   padding: 12px 0;
 }
@@ -4057,7 +4058,7 @@ table {
 table th,
 table td {
   padding: 10px 3px;
-  border: 1px solid #000;
+  border: 1px solid #1aa1a3;
 }
 
 table a {
@@ -4131,10 +4132,6 @@ table a {
 
 /* ---- Plugins style ---- */
 
-.masonry-grid {
-  visibility: hidden;
-}
-
 .masonry-grid.layout-complete {
   visibility: visible;
 }
@@ -4168,9 +4165,9 @@ table a {
 
 #infinite-handle span {
   font-size: 15px;
-  color: #000;
+  color: #1aa1a3;
   padding: 20px 0;
-  border: 2px solid #000;
+  border: 2px solid #1aa1a3;
   background: none;
   font-weight: 600;
   cursor: pointer;
@@ -4179,7 +4176,7 @@ table a {
 }
 
 #infinite-handle span:hover {
-  background: #000;
+  background: #1aa1a3;
   color: #fff;
 }
 
@@ -4189,7 +4186,7 @@ table a {
   width: 40px;
   height: 40px;
   border: 4px solid rgba(0, 0, 0, 0.2);
-  border-top-color: #000;
+  border-top-color: #1aa1a3;
   -webkit-animation: spin 2s infinite linear;
           animation: spin 2s infinite linear;
 }
@@ -4248,7 +4245,7 @@ table a {
 .rpwe-title {
   padding: 10px;
   margin: 0;
-  background: #000;
+  background: #1aa1a3;
   font-weight: 600;
   font-size: 15px;
   text-transform: none;
@@ -4266,11 +4263,11 @@ a + .rpwe-title {
 }
 
 a + .rpwe-title:hover {
-  background: #000;
+  background: #1aa1a3;
 }
 
 .rpwe-img:hover + .rpwe-title {
-  background: #000;
+  background: #1aa1a3;
 }
 
 .yikes-mailchimp-form-description p {
@@ -4336,6 +4333,13 @@ a + .rpwe-title:hover {
   display: none;
 }
 
+pre {
+  word-break: normal;
+  word-wrap: normal;
+  white-space: normal;
+  font-size: 0.9em;
+}
+
 .site-title {
   height: 100px;
   width: calc(182.07px);
@@ -4346,6 +4350,59 @@ a + .rpwe-title:hover {
 
 .site-title span {
   display: none;
+}
+
+.top-offset-column {
+  padding-top: 300px;
+}
+
+.top-padding-2 {
+  padding-top: 2em;
+}
+
+#mad_mimi_form2 {
+  margin-top: 20px;
+}
+
+#mad_mimi_form2 input {
+  margin-bottom: 15px;
+}
+
+#mad_mimi_form2 input.button {
+  margin-top: 15px;
+}
+
+.newsletter-area-center {
+  margin-bottom: 2em;
+  background: #f4d369;
+}
+
+.newsletter-area-center #mad_mimi_form2 {
+  margin-bottom: 30px;
+}
+
+.newsletter-area-center #mad_mimi_form2 br {
+  display: none;
+}
+
+.newsletter-area-center #mad_mimi_form2 input {
+  width: 47.5%;
+}
+
+.newsletter-area-center #mad_mimi_form2 input[type=text] {
+  margin-right: 4%;
+}
+
+.grid-post-item {
+  height: 240px;
+  margin-bottom: 30px;
+}
+
+.grid-post-item figure img {
+  min-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 240px;
 }
 
 @media (min-width: 480px) {
@@ -4364,7 +4421,7 @@ a + .rpwe-title:hover {
   table th,
   table td {
     padding: 10px;
-    border: 1px solid #000;
+    border: 1px solid #1aa1a3;
   }
 }
 
@@ -5252,11 +5309,11 @@ a + .rpwe-title:hover {
   }
 
   .main-navigation__menu > .menu-item > a:hover {
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid #1aa1a3;
   }
 
   .main-navigation__menu > .current-menu-item > a {
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid #1aa1a3;
   }
 
   .main-submenu {
@@ -5277,11 +5334,11 @@ a + .rpwe-title:hover {
   }
 
   .menu-item.button a {
-    border: 2px solid #000;
+    border: 2px solid #1aa1a3;
   }
 
   .menu-item.button a:hover {
-    background: #000;
+    background: #1aa1a3;
     color: #fff;
     transition: color ease-in 0.3s, background ease-in 0.3s;
   }
@@ -5577,7 +5634,7 @@ a + .rpwe-title:hover {
     display: block;
     visibility: hidden;
     width: 60%;
-    background: #000;
+    background: #1aa1a3;
     min-height: 100vh;
     height: auto;
     position: fixed;

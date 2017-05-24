@@ -8,7 +8,7 @@
  */
 
 $classes = array();
-$classes[] = 'masonry-grid__item';
+$classes[] = 'grid-post-item col-xs-12 col-sm-6 col-md-4';// 'masonry-grid__item';
 ?>
 
 <div id="post-<?php the_ID(); ?>" <?php post_class( $classes ); ?>>

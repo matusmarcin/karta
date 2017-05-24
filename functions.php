@@ -139,16 +139,6 @@ function karta_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => esc_html__( 'Narrow (left) sidebar', 'karta' ),
-		'id'            => 'left-1',
-		'description'   => esc_html__( 'Add narrow widgets here.', 'karta' ),
-		'before_widget' => '<div class="col-xs-12"><section id="%1$s" class="site-narrow-widget %2$s">',
-		'after_widget'  => '</section></div>',
-		'before_title'  => '<h3 class="site-narrow-widget__title">',
-		'after_title'   => '</h3>',
-	) );
-
-	register_sidebar( array(
 		'name'          => esc_html__( 'Wide (right) sidebar', 'karta' ),
 		'id'            => 'right-1',
 		'description'   => esc_html__( 'Add wide widgets here.', 'karta' ),
@@ -157,6 +147,26 @@ function karta_widgets_init() {
 		'before_title'  => '<h3 class="site-wide-widget__title">',
 		'after_title'   => '</h3>',
 	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Wide (right, bottom) sidebar', 'karta' ),
+		'id'            => 'right-2',
+		'description'   => esc_html__( 'Add bottom widgets here.', 'karta' ),
+		'before_widget' => '<div class="col-xs-12"><section id="%1$s" class="site-wide-widget %2$s">',
+		'after_widget'  => '</section></div>',
+		'before_title'  => '<h3 class="site-wide-widget__title">',
+		'after_title'   => '</h3>',
+	) );	
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Center (newsletter) sidebar', 'karta' ),
+		'id'            => 'center-1',
+		'description'   => esc_html__( 'Add newsletter widgets here.', 'karta' ),
+		'before_widget' => '<div class="newsletter-area-center row"><div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3"><section id="%1$s" class="site-center-widget %2$s">',
+		'after_widget'  => '</section></div></div>',
+		'before_title'  => '<h3 class="site-center-widget__title">',
+		'after_title'   => '</h3>',
+	) );	
 
 	/**
 	 * Modals sidebar.
@@ -181,7 +191,7 @@ function karta_scripts() {
 
 	wp_enqueue_style( 'karta-style', get_template_directory_uri() . '/css/style.css' );
 
-	wp_enqueue_script( 'karta-vendors', get_template_directory_uri() . '/js/vendors.js', array( 'jquery', 'jquery-masonry' ), '20160411', true );
+	wp_enqueue_script( 'karta-vendors', get_template_directory_uri() . '/js/vendors.js', array( 'jquery' ), '20160411', true ); // 'jquery-masonry'
 	wp_enqueue_script( 'karta-scripts', get_template_directory_uri() . '/js/scripts.js', array( 'karta-vendors' ), '20160411', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -209,3 +219,32 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+
+function my_theme_archive_title( $title ) {
+    if ( is_category() ) {
+        $title = single_cat_title( '', false );
+    } elseif ( is_tag() ) {
+        $title = single_tag_title( '', false );
+    } elseif ( is_author() ) {
+        $title = '<span class="vcard">' . get_the_author() . '</span>';
+    } elseif ( is_post_type_archive() ) {
+        $title = post_type_archive_title( '', false );
+    } elseif ( is_tax() ) {
+        $title = single_term_title( '', false );
+    }
+  
+    return $title;
+}
+ 
+add_filter( 'get_the_archive_title', 'my_theme_archive_title' );
+
+// add_action( 'init', 'pmg_rewrite_add_rewrites' );
+// function pmg_rewrite_add_rewrites()
+// {
+//     add_rewrite_rule(
+//         '^post/(d+)/?$', // p followed by a slash, a series of one or more digits and maybe another slash
+//         'index.php?p=$matches[1]',
+//         'top'
+//     );
+// }

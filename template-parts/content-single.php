@@ -14,18 +14,18 @@ if ( 'chat' === get_post_format() ) {
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="post-cover" <?php karta_background_image_url() ?>>
-		<div class="post-intro container">
+		<div class="post-intro <?php if(is_singular()) echo "container"; ?>">
 			<div class="post-intro__categories">
 				<?php karta_categories(); ?>
 			</div>
 			<div class="post-intro__content">
 				<p class="post-intro__date"><?php echo esc_html( get_the_date() ); ?></p>
-				<?php the_title( '<h1 class="post-intro__title">', '</h1>' ); ?>
-				<?php if ( has_tag() ) : ?><p class="post-intro__tags"><?php esc_html( the_tags() ); ?></p><?php endif; ?>
+				<?php the_title( '<h1 class="post-intro__title"><a href="'.get_permalink().'">', '</a></h1>' ); ?>
+				<?php if ( false && has_tag() ) : ?><p class="post-intro__tags"><?php esc_html( the_tags() ); ?></p><?php endif; ?>
 			</div>
 		</div>
 	</div>
-	<div class="container">
+	<div class="<?php if(is_singular()) echo "container"; ?>">
 		<div class="row">
 		<?php 
 		if(is_singular()) {
@@ -45,6 +45,9 @@ if ( 'chat' === get_post_format() ) {
 				<?php if ( is_active_sidebar( 'right-1' ) ) : ?>
 					<?php dynamic_sidebar( 'right-1' ); ?>
 				<?php endif; ?>
+				<?php if ( is_active_sidebar( 'right-2' ) ) : ?>
+					<?php dynamic_sidebar( 'right-2' ); ?>
+				<?php endif; ?>
 			</div>
 		<?php  
 		} else {
@@ -55,7 +58,9 @@ if ( 'chat' === get_post_format() ) {
 				<div class="post-content">
 					<?php
 					the_content();
-					karta_pagination();
+					if(is_singular()) { 
+						karta_pagination(); 
+					}
 					?>
 				</div>
 				<?php endif; ?>

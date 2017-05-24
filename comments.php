@@ -20,7 +20,7 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div class="container container--custom">
+<div class="container">
 	<div class="row">
 		<div class="col-xs-12">
 			<div id="comments" class="comments-area">
