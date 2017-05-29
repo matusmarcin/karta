@@ -14,6 +14,8 @@
 
 global $wp_query;
 
+require('archive.php');
+/*
 get_header(); ?>
 
 <div id="primary" class="content-area">
@@ -30,9 +32,9 @@ get_header(); ?>
 			<div class="container">
 					<div class="row">
 						<div class="col-xs-12">
-							<div class="masonry-grid">
+							<!--<div class="masonry-grid">
 								<div class="masonry-grid__sizer"></div>
-								<div class="masonry-grid__gutter-sizer"></div>
+								<div class="masonry-grid__gutter-sizer"></div>-->
 			<?php endif; ?>
 
 			<?php
@@ -48,22 +50,22 @@ get_header(); ?>
 				<?php endif; // Endif counter < 3. ?>
 
 				<?php if ( ! is_paged() && 3 === ++$post_counter && $wp_query->post_count > 3 ) : ?>
-						</div>
+						<!--</div>
 					</div>
-				</div>
+				</div>-->
 			</div>
 
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12">
-						<div class="masonry-grid">
+						<!--<div class="masonry-grid">
 							<div class="masonry-grid__sizer"></div>
-							<div class="masonry-grid__gutter-sizer"></div>
+							<div class="masonry-grid__gutter-sizer"></div>-->
 				<?php endif;
 			endwhile; ?>
-						</div>
+						<!--</div>
 					</div>
-				</div>
+				</div>-->
 			</div>
 
 			<?php karta_pagination(); ?>
@@ -76,3 +78,4 @@ get_header(); ?>
 </div>
 
 <?php get_footer();
+*/
