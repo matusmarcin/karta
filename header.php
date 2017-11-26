@@ -42,7 +42,7 @@
 								<div class="collapse navbar-collapse" id="menu1">
 								<?php
 								if (has_nav_menu('primary')) {
-									wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'main-navigation__menu', 'container' => '', 'menu_id' => 'primary-menu', 'walker' => new Karta_Walker_Nav_Menu ) );
+									wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'main-navigation__menu', 'container' => '', 'menu_id' => 'primary-menu', 'depth' => 2, 'walker' => new Karta_Walker_Nav_Menu ) );
 								}
 
 								if ( is_active_sidebar( 'modals-1' ) ) {

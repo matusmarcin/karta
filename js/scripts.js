@@ -64,19 +64,19 @@
 
 	// Masonry init.
 	var $gridImages = gridImages( $grid );
-	$grid.masonry( masonryOptions );
+	// $grid.masonry( masonryOptions );
 
 	// Masonry: Add class layout complete (visibility:visible;).
-	$grid.masonry( 'on', 'layoutComplete', function() {
+	// $grid.masonry( 'on', 'layoutComplete', function() {
 		$grid.addClass( 'layout-complete' );
-	} );
+	// } );
 
 	// Masonry: When images are loaded remove init size.
-	$gridImages.imagesLoaded().then( function() {
-		$gridImages.trigger( 'removeInitSize' );
-		$grid.masonry();
-		$( '.infinite-loader' ).hide();
-	} );
+	// $gridImages.imagesLoaded().then( function() {
+	// 	$gridImages.trigger( 'removeInitSize' );
+	// 	$grid.masonry();
+	// 	$( '.infinite-loader' ).hide();
+	// } );
 
 	$( '#infinite-handle' ).on( 'click', function() {
 		$( this ).hide();
@@ -88,11 +88,11 @@
 		var $newposts = $( '.masonry-grid__item', $posts );
 		var $newpostsImages = gridImages( $newposts );
 
-		$newpostsImages.imagesLoaded().then( function() {
-			$newpostsImages.trigger( 'removeInitSize' );
-			$grid.masonry( 'appended', $newposts );
-			$newposts.css( 'visibility', 'visible' );
-		} );
+		// $newpostsImages.imagesLoaded().then( function() {
+		// 	$newpostsImages.trigger( 'removeInitSize' );
+		// 	$grid.masonry( 'appended', $newposts );
+		// 	$newposts.css( 'visibility', 'visible' );
+		// } );
 
 		$grid.append( $newposts.css( 'visibility', 'hidden' ) );
 		$( '.infinite-loader' ).hide();
@@ -117,7 +117,7 @@
 
 	// Match height when images are loaded and on resize.
 	var recentPostsImages = $( 'footer .rpwe-li' );
-	recentPostsImages.imagesLoaded( matchHeight );
+	// recentPostsImages.imagesLoaded( matchHeight );
 	$( window ).on( 'resize', debounce( matchHeight, 200 ) );
 
 	// Open/close custom modal .
@@ -137,12 +137,12 @@
 		}
 
 		$( '.modal.modal--active' ).trigger( 'karta.modal.close' );
-		$( this ).addClass( 'modal--active' ).slideDown();
+		$( this ).addClass( 'modal--active' ).slideDown(200);
 	} );
 
 	// Close modal.
 	$( document ).on( 'karta.modal.close', '.modal', function( event ) {
-		$( this ).removeClass( 'modal--active' ).slideUp();
+		$( this ).removeClass( 'modal--active' ).slideUp(200);
 	} );
 
 	// Close modal on X.
