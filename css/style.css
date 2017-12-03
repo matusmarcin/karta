@@ -4444,6 +4444,34 @@ article.post {
   font-size: 1.2em;
 }
 
+.navbar-toggle {
+  top: 95px;
+  right: 20px;
+  padding: 5px;
+  background: #1aa1a3;
+}
+
+.navbar-toggle.collapsed {
+  background: transparent;
+}
+
+.navbar-collapse {
+  box-shadow: -1px 0px 1px 0px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item .modal__close {
+  display: none;
+}
+
+.main-submenu > .menu-item {
+  margin-bottom: 0;
+  display: block;
+}
+
+.main-submenu > .menu-item > a {
+  border-width: 0;
+}
+
 @media (min-width: 480px) {
   .post-intro__title {
     font-size: 40px;
@@ -5427,6 +5455,26 @@ article.post {
 
   .newsletter-area-center #mad_mimi_form2 input[type=text] {
     margin-right: 4%;
+  }
+
+  .main-submenu > .menu-item {
+    margin-bottom: 25px;
+    display: inline-block;
+  }
+
+  /* change this to the one that has modal active */
+
+  .main-navigation__menu > .menu-item > a:hover {
+    border-bottom: 2px solid #1aa1a3;
+  }
+
+  .menu-item .modal__close {
+    display: block;
+    margin-bottom: 0;
+  }
+
+  .navbar-collapse {
+    box-shadow: none;
   }
 }
 

@@ -82,6 +82,10 @@ body#tinymce.wp-editor img {
   height: auto;
 }
 
+body#tinymce.wp-editor img.wp-more-tag {
+  height: 20px;
+}
+
 body#tinymce.wp-editor button {
   border: 0;
 }
@@ -189,7 +193,6 @@ body#tinymce.wp-editor .gallery-item .gallery-caption {
   padding: 20px 15px;
   color: #fff;
   margin: 0;
-  -webkit-transition: background ease-in 0.3s;
   transition: background ease-in 0.3s;
   font-size: 16px;
   line-height: 1.3;
@@ -231,7 +234,6 @@ body#tinymce.wp-editor .wp-caption-dd {
   overflow: hidden;
   padding: 30px 25px;
   color: #fff;
-  -webkit-transition: background ease-in 0.3s;
   transition: background ease-in 0.3s;
   margin-bottom: 0;
   font-size: 16px;

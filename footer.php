@@ -26,7 +26,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-6 col-xs-12">
-						<p class="site-info__copyright"><?php echo esc_html( get_theme_mod( 'karta_sitecopyright', esc_html__( 'Copyright', 'karta' ) . ' &copy; ' . get_bloginfo( 'name' ) ) ); ?></p>
+						<p class="site-info__copyright"><?php echo '&copy; ' . date('Y') . ' ' . esc_html( get_theme_mod( 'karta_sitecopyright', esc_html__( 'Copyright', 'karta' ) ) ); ?></p>
 					</div>
 					<div class="col-sm-6 col-xs-12">
 						<div class="site-info__designed-by">
